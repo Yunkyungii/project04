@@ -1,0 +1,397 @@
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.sec {
+    padding: 100px 0;
+}
+
+.sec .title {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.header .inner {
+    display: flex;
+    line-height: 80px;
+    justify-content: space-between;
+    color: #fff;
+    align-items: center;
+}
+
+.header h1 img {
+    height: 50px;
+}
+
+.header .menu_list {
+
+    display: flex;
+    gap: 50px;
+
+}
+
+.header .menu_list>li {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.header i {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.header .gnb>ul>li {
+    position: relative;
+}
+
+.header .sub {
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 999;
+    text-align: center;
+    width: 100%;
+    line-height: 40px;
+
+    transition: 0.5s;
+}
+
+.main_visual {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.main_visual .itm {
+    min-height: 1000px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 120%;
+}
+
+.main_visual .itm.on {
+    background-size: auto 100%;
+    transition: 2s;
+}
+
+
+/* .main_slide .slick-active .bg1 {
+    transform: scale(1.8);
+} */
+
+.bg1 {
+    background-image: url(../images/main-visual-01.jpg);
+
+}
+
+
+
+.bg2 {
+    background-image: url(../images/main-visual-02.jpg);
+}
+
+.bg3 {
+    background-image: url(../images/main-visual-03.jpg);
+}
+
+
+.itm .main_tit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0, -100%);
+    margin: 0 0 0 -585px;
+    color: #fff;
+}
+
+.itm .main_tit h2 {
+    font-size: 70px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s;
+}
+
+.main_slide .slick-active .main_tit h2 {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.itm .main_tit p {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 34px;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1S 1s;
+}
+
+.main_slide .slick-active .main_tit p {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.main_visual .dots {
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+
+    display: flex;
+    gap: 10px;
+    transform: translate(0, 0);
+    margin: 0 0 0 -585px;
+    padding: 0 15px;
+}
+
+.main_visual .dots a {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.main_visual .dots li {
+    position: relative;
+    width: 70px;
+    height: 30px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.main_visual .dots li.on a {
+    color: #fff;
+}
+
+.main_visual .dots li::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+
+}
+
+.main_visual .dots li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: #fff;
+}
+
+.main_visual .dots li.on::after {
+    width: 100%;
+    transition: 2s;
+}
+
+.main_visual .arrows {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    transform: translate(-100%, -50%);
+    margin: 0 0 0 700px;
+    padding: 0 15px;
+}
+
+.main_visual .arrows i {
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.main_visual .arrows i:hover {
+    color: rgba(255, 255, 255, 1);
+    border: 2px solid rgba(255, 255, 255, 1);
+}
+
+.main_visual .scr {
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+    transform: translate(-100%, 0);
+    margin: 0 0 0 700px;
+    padding: 0 15px;
+    font-size: 30px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    color: #fff;
+
+
+
+    animation: wheel 0.5s infinite;
+}
+
+
+@keyframes wheel {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, 5px);
+    }
+}
+
+.main_event .content {
+    display: flex;
+    gap: 15px;
+}
+
+.main_event .content figure {
+    flex: 1;
+}
+
+.main_event .img_box {
+    margin: 0 0 20px 0;
+    overflow: hidden;
+
+}
+
+.main_event .title {
+    text-align: center;
+}
+
+.main_event .title h2 {
+    font-size: 16px;
+    font-weight: 900;
+    color: #63b23a;
+    margin: 0 0 30px 0;
+
+}
+
+.main_event .title p {
+    font-size: 40px;
+    font-weight: 400;
+    color: #444;
+    line-height: 1.5;
+    margin: 0 0 30px 0;
+}
+
+.main_event figcaption {
+    text-align: center;
+}
+
+.main_event figcaption h3 {
+    font-size: 25px;
+    margin: 0 0 20px 0;
+}
+
+.main_event figcaption p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.4;
+    margin: 0 0 30px 0;
+}
+
+
+.main_event figcaption .con_btn {
+    padding: 10px 20px 15px 20px;
+    font-size: 14px;
+    color: #655238;
+    border: 1px solid #655238;
+    border-radius: 0 20px 0 20px;
+    background-color: #fff;
+    transition: 0.5s;
+    text-align: center;
+
+}
+
+.main_event figcaption .con_btn i {
+    font-size: 22px;
+    padding: 0 0 0 15px;
+}
+
+.main_event figcaption .con_btn:hover {
+    color: #fff;
+    background-color: #655238;
+}
+
+.sub_event {
+    background: #f2ebe1;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.sub_event .event {
+    position: relative;
+}
+
+.sub_event .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0, -50%);
+    margin: 0 0 0 -585px;
+    width: 500px;
+}
+
+.sub_event .text span {
+    display: block;
+    font-size: 16px;
+    font-weight: 900;
+    color: #63b23a;
+    margin: 0 0 30px 0;
+}
+
+.sub_event .text h2 {
+    font-size: 40px;
+    font-weight: 400;
+    color: #444;
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+}
+
+.sub_event .text p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.4;
+    margin: 0 0 30px 0;
+}
+
+.sub_event .text a {
+    padding: 10px 20px 10px 20px;
+    font-size: 14px;
+    color: #655238;
+    border: 1px solid #655238;
+    border-radius: 0 20px 0 20px;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.sub_event .box01 .about_img {
+    text-align: right;
+}
+
+.sub_event .box02 .text {
+    text-align: left;
+}
+
+.sub_event .box03 .about_img {
+    text-align: right;
+}
