@@ -1,5 +1,10 @@
 $(function () {
 
+    $(window).on('scroll', function () {
+        let sct = $(window).scrollTop();
+        sct > 0 ? $('.header').addClass('on') : $('.header').removeClass('on');
+    })
+
     $('.main_slide').on('init afterChange', function (e, s, c) {
         const current = $('.main_slide .slick-current');
         current.addClass('on').siblings().removeClass('on');
@@ -8,6 +13,18 @@ $(function () {
             .siblings().removeClass('on');
 
     });
+
+    $(window).on('load scroll', function () {
+        let sct = $(window).scrollTop();
+        console.log(sct);
+        $('.sec').each(function () {
+            if (sct > $(this).offset().top - 200) {
+                $(this).addClass('on');
+            } else {
+                $(this).removeClass('on');
+            }
+        })
+    })
 
 
 
@@ -29,6 +46,13 @@ $(function () {
         e.preventDefault();
         const idx = $(this).index();
         $('.main_slide').slick('slickGoTo', idx);
+    })
+
+    $('.main_visual .arrows .left').on('click', function () {
+        $('.main_slide').slick('slickPrev');
+    })
+    $('.main_visual .arrows .right').on('click', function () {
+        $('.main_slide').slick('slickNext');
     })
 
 
