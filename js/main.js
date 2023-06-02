@@ -27,7 +27,7 @@ $(function () {
         arrows: false,
         autoplaySpeed: 3000,
         pauseOnHover: false,
-        dots: true,
+        dots: false,
         infinite: true,
 
         prevArrow: "<button type='button' class='slick-prev'>Previous</button>",		// 이전 화살표 모양 설정
