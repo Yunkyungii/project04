@@ -1,9 +1,15 @@
 $(function () {
 
     $(window).on('scroll', function () {
-        let sct = $(window).scrollTop();
-        sct > 0 ? $('.header').addClass('on') : $('.header').removeClass('on');
-    })
+        // 변수에 스크롤한 양을 담는다.
+        let sct = $(window).scrollTop()
+        console.log(sct);
+        if (sct > 0) {
+            $('.header').addClass('on')
+        } else {
+            $('.header').removeClass('on')
+        }
+    });
 
     $('.main_slide').on('init afterChange', function (e, s, c) {
         const current = $('.main_slide .slick-current');
@@ -13,18 +19,6 @@ $(function () {
             .siblings().removeClass('on');
 
     });
-
-    $(window).on('load scroll', function () {
-        let sct = $(window).scrollTop();
-        console.log(sct);
-        $('.sec').each(function () {
-            if (sct > $(this).offset().top - 200) {
-                $(this).addClass('on');
-            } else {
-                $(this).removeClass('on');
-            }
-        })
-    })
 
 
 
