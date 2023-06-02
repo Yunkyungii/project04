@@ -348,6 +348,7 @@
     transform: translate(0, -50%);
     margin: 0 0 0 -585px;
     width: 500px;
+    z-index: 1;
 }
 
 .sub_event .text span {
@@ -392,16 +393,35 @@
 
 .sub_event .box01 .about_img {
     text-align: right;
+
 }
+
 
 
 
 .sub_event .box02 .text {
     transform: translate(-100%, -50%);
     margin: 0 0 0 600px;
+
 }
 
-/* .sub_event .box02 .text h2 {
+.sub_event .box02 {
+    position: relative;
+}
+
+.sub_event .box02::before {
+    content: "";
+    position: absolute;
+    bottom: -35%;
+    right: calc((100% - 1170px)/2);
+
+    z-index: -999;
+    background: #655238;
+    width: 500px;
+    height: 1180px;
+}
+
+.sub_event .box02 .text h2 {
     color: #fff;
 }
 
@@ -417,12 +437,13 @@
 .sub_event .box02 .text a:hover {
     color: #655238;
     background: #fff;
-} */
+}
 
 
 
 .sub_event .box03 .about_img {
     text-align: right;
+
 }
 
 .sec .customer {
