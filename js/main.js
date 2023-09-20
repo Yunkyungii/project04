@@ -70,7 +70,9 @@ $(function () {
     })
 
 
-
+    $('.footer button i').on('click', function () {
+        $('.footer .fm').slideToggle('on');
+    })
 
 
 
